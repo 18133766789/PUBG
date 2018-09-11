@@ -1,2 +1,0 @@
-# PUBG
-project-pubg
