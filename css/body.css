@@ -1,0 +1,786 @@
+/* autoplay:false   是否自动播放
+controls:false   是否显示播放控件
+loop:false      是否是循环播放
+muted:false    是否是静音播放
+poster:""      在播放第一帧之前显示的海报
+preload:       视频预加载策略
+   auto:      预加载视频元数据和缓冲一定时长
+   metadata:  只加载元数据(第一帧画;时长)
+   none:      不加载任何数据
+        您的浏览器版本太低，请更新!!! */
+/* 视频位置 */
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    width: 100%;
+    background:black;
+}
+.main{
+    width:100%;
+}
+.video-1{
+    width:100%;
+    /* height:1070px; */
+}
+.video-1>video{
+    width:100%;
+}
+.btn-play>a>img{
+    display:block;
+    position: absolute;;
+    top:50%;
+    left:50%;
+    margin-top:-50px;
+    margin-left:-40px;
+}
+/* 视频 遮罩层 */
+.zzc{
+    width:100%;
+    height:6330px;
+    background-color:rgba(0,0,0,0.7);
+    position: absolute;
+    top:0px;
+    position: fixed;
+    display:none;
+    z-index:1000000;
+}
+.zzc1{
+    width:1280px;
+    height:800px;
+    background:black;
+    display: block;
+    margin:50px auto;
+    /* overflow: hidden; */
+}
+.zzc1>a{
+    font-size:50px;
+    color:white;
+    margin-left:1200px;
+    display:block;
+}
+#logo_b>img{
+    position:absolute;
+    margin-top:-400px;
+    margin-left:620px;
+
+}
+.bg-logo>img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left:-340px;
+    margin-top:100px;
+}
+/* 第二段视屏背景 */
+.video-2{
+    width:100%;
+    height:1070px;
+    position: relative;
+    margin-top:-5px;
+}
+.video-2>video{
+    width:100%;
+    z-index:-10;
+}
+/* 写实体验 战术竞技 */
+.xs{
+    width:550px;
+    height:200px;
+    background-position:-240px 760px;;
+    background-image:url(../img/sprite.png);
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-250px;
+}
+/* 连呼吸都必须小心翼翼,前所未有的紧张刺激体验 */
+.hx{
+    color:white;
+    font-style:italic;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:200px;
+    margin-left:-250px;
+}
+/* 发光加号 */
+.jh>a{
+    color:#e69800;
+    position:absolute;
+    font-size:18px;
+    top:50%;
+    left:50%;
+    margin-top:300px;
+    margin-left:150px;
+}
+/* 第三段视屏背景 */
+.video-3{
+    width:100%;
+    /* height:1070px; */
+    margin-top:-5px;
+    position: relative;
+}
+/* 视频高度 */
+.video-3>video{
+    width:100%;
+    z-index:-10;
+}
+/* 大世界 ,射击体验 */
+.dsj{
+    width:550px;
+    height:215px;
+    background-position:-790px 760px;;
+    background-image:url(../img/sprite.png);
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-250px;
+}
+/* 真 实 的 射 击 体 验, 多 种 枪 械 与 配 件, 眼 观 六 路 耳 听 八 方 */
+.sj{
+    color:white;
+    font-style:italic;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:215px;
+    margin-left:-250px;
+}
+/* 发光加号 */
+.jh1>a{
+    color:#e69800;
+    font-size:18px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:300px;
+    margin-left:150px;
+}
+/* 天气and地形 */
+.weather-terrain{
+    width:1920px;
+    height:900px;
+    margin:auto;
+    margin-top:-10px;    
+    position: relative;
+    color:white;
+}
+/* 天气图片 */
+.wea{
+    width: 100%;
+    height:900px;
+}
+.wea>ul{
+    width: 100%;
+    margin:0;
+    padding:0;
+    list-style:none;
+    display:flex;
+    margin-right:300px;
+
+}
+.pic1,.pic2,.pic3{
+    width:100%;
+    height:900px;
+}
+.wea>ul a{
+    width:100%;
+    height:55%;
+    color:red;
+    font-size:50px;
+    display: block;
+    text-decoration: none;
+    color:white;
+    text-align: center;
+    margin-top:400px;    
+}
+.pic1{
+    opacity: 0.5;  
+    background: url('../img/img_weather1.jpg')no-repeat;
+}
+.pic2{
+    opacity: 0.5;  
+    background: url('../img/img_weather2.jpg')no-repeat;
+}
+.pic3{
+    opacity: 0.5;  
+    background: url('../img/img_weather3.jpg')no-repeat;
+}
+/* 各种天气地形  文字*/
+.tianqidixing>img{
+    display:block;
+    position: absolute;
+    top:15%;
+    left:31%;
+    z-index: 10000;
+}
+/***********天气地形点击切换**************/
+/* 天气大div下面的a */
+.tianqi>a{
+    width:200px;
+    display:block;
+    color:white;
+    /* border:1px solid red; */
+    text-align:center;
+    position:absolute;
+    top:75%;
+    left:35%;
+    z-index:1000;
+
+}
+/* 第二个天气大div下面的a */
+.tianqi1>a{
+    width:200px;
+    display:block;
+    color:#e69800;
+    /* border:1px solid red; */
+    text-align:center;
+    position:absolute;
+    top:75%;
+    left:35%;
+    z-index:1000;
+
+}
+/* 地形大div下面的a */
+.dixing>a{
+    width:200px;
+    display:block;
+    color:white;
+    /* border:1px solid red; */
+    text-align:center;
+    position:absolute;
+    top:75%;
+    left:54.5%;
+    z-index:1000;
+
+}
+/* 第二个地形大div下面的a */
+.dixing1{
+    display:none;
+}
+.dixing1>a{
+    width:200px;
+    display:block;
+    color:#e69800;
+    /* border:1px solid red; */
+    text-align:center;
+    position:absolute;
+    top:75%;
+    left:54.5%;
+    z-index:1000;
+
+}
+/* 天气地形层次 */
+
+/* b元素字体 */
+#tqdx{
+    font-size:20px;
+}
+/* 地形图片 */
+.ter{
+    width: 100%;
+    height:900px;
+    position:absolute;
+    top:0%;
+    left:0%;
+    display:none;
+    z-index:1000;
+}
+.ter>ul{
+    width: 100%;
+    margin:0;
+    padding:0;
+    list-style:none;
+    display:flex;
+    margin-right:300px;
+
+}
+/* 图片大小 */
+.tpic1,.tpic2,.tpic3,.tpic4,.tpic5{
+    width:100%;
+    height:900px;
+    /* border:1px solid red; */
+}
+/* a元素 */
+.ter>ul a{
+    width:100%;
+    height:55%;
+    color:red;
+    font-size:50px;
+    display: block;
+    text-decoration: none;
+    color:white;
+    text-align: center;
+    margin-top:400px;    
+}
+/* 所有地形图片 */
+.tpic1{
+    opacity: 0.5;  
+    background: url('../img/img_terrain1.jpg')no-repeat;
+}
+.tpic2{
+    opacity: 0.5;  
+    background: url('../img/img_terrain2.jpg')no-repeat;
+}
+.tpic3{
+    opacity: 0.5;  
+    background: url('../img/img_terrain3.jpg')no-repeat;
+}
+.tpic4{
+    opacity: 0.5;  
+    background: url('../img/img_terrain4.jpg')no-repeat;
+}
+.tpic5{
+    opacity: 0.5;  
+    background: url('../img/img_terrain5.jpg')no-repeat;
+}
+/* 第四段视频 */
+.video-4{
+    width:100%;
+    /* height:1050px;*/
+    margin-top:-5px;
+    position: relative;
+}
+.video-4>video{
+    width:100%;
+}
+#kc1{
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-50px;
+    margin-left:-250px;
+}
+#kc2{
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:50px;
+    margin-left:-100px;
+}
+/* 发光加号 */
+.zjjh>a{
+    color:#e69800;
+    position:absolute;
+    font-size:18px;
+    top:50%;
+    left:50%;
+    margin-top:200px;
+    margin-left:50px;
+}
+/* 丰 富 载 具，团 队 合 作，好 友 开 黑 */
+.zj{
+    color:white;
+    font-style:italic;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:155px;
+    margin-left:-200px;
+}
+/* <!-- ----------瞬息万变 策略为王----------------- --> */
+.later{
+    position: relative;
+    margin-top:-10px;
+    
+}
+.later>img{
+    width:100%;
+    height:1080px;
+    margin-top:-50px;
+    position: absolute;;
+    z-index:-1;
+    /* background:url(../img/bg_section5.jpg)no-repeat; */
+}
+.cl{
+    width:750px;
+    height:90px;
+    background-position:-0px -590px;;
+    background-image:url(../img/sprite.png);
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-360px;
+    margin-top:110px;
+}
+/* 最后的加号 */
+.zhjh>a{
+    color:#e69800;
+    position:absolute;
+    font-size:18px;
+    top:50%;
+    left:50%;
+    margin-top:450px;
+    margin-left:-230px;
+}
+.zhjh1>a{
+    color:#e69800;
+    position:absolute;
+    font-size:18px;
+    top:50%;
+    left:50%;
+    margin-top:620px;
+    margin-left:175px;
+}
+/********************小圆点动画1***************************/
+#h1{
+    width:25px;
+    height:25px;
+    display:block;
+    border-radius: 50%;
+    background:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:301px;
+    margin-left:144px;
+    animation:hx 1s;
+    animation-iteration-count:infinite;
+}
+#h2{
+    width:30px;
+    height:30px;
+    display:block;
+    border-radius: 50%;
+    background:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:299.5px;
+    margin-left:142px;
+    animation:hx1 1s;
+    animation-iteration-count:infinite;
+}
+#h3{
+    width:35px;
+    height:35px;
+    display:block;
+    border-radius: 50%;
+    background:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:297.5px;
+    margin-left:139.5px;
+    animation:hx2 1s;
+    animation-iteration-count:infinite;
+}
+ @keyframes hx{
+    from {
+        opacity:0.3;
+    }
+    to {
+        opacity:0.8;
+    }
+}
+
+@keyframes hx1{
+    from {
+        transform: scale(1);
+        opacity:0.8;
+    }
+    to {
+        transform: scale(2);
+        opacity:0;
+    }
+}
+@keyframes hx2{
+    from {
+        transform: scale(1);
+        opacity:0.8;
+    }
+    to {
+        transform: scale(3);
+        opacity:0;
+    }
+} 
+/********************小圆点动画2***************************/
+#h4{
+    width:25px;
+    height:25px;
+    display:block;
+    border-radius: 50%;
+    background:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:301px;
+    margin-left:144px;
+    animation:hx3 1s;
+    animation-iteration-count:infinite;
+}
+#h5{
+    width:30px;
+    height:30px;
+    display:block;
+    border-radius: 50%;
+    background:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:299.5px;
+    margin-left:142px;
+    animation:hx4 1s;
+    animation-iteration-count:infinite;
+}
+#h6{
+    width:35px;
+    height:35px;
+    display:block;
+    border-radius: 50%;
+    background:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:297.5px;
+    margin-left:139.5px;
+    animation:hx5 1s;
+    animation-iteration-count:infinite;
+}
+ @keyframes hx3{
+    from {
+        opacity:0.3;
+    }
+    to {
+        opacity:0.8;
+    }
+}
+
+@keyframes hx4{
+    from {
+        transform: scale(1);
+        opacity:0.8;
+    }
+    to {
+        transform: scale(2);
+        opacity:0;
+    }
+}
+@keyframes hx5{
+    from {
+        transform: scale(1);
+        opacity:0.8;
+    }
+    to {
+        transform: scale(3);
+        opacity:0;
+    }
+} 
+/********************小圆点动画3***************************/
+#h7{
+    width:25px;
+    height:25px;
+    display:block;
+    border-radius: 50%;
+    background:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:200.5px;
+    margin-left:44px;
+    animation:hx6 1s;
+    animation-iteration-count:infinite;
+}
+#h8{
+    width:30px;
+    height:30px;
+    display:block;
+    border-radius: 50%;
+    background:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:198px;
+    margin-left:41.5px;
+    animation:hx7 1s;
+    animation-iteration-count:infinite;
+}
+#h9{
+    width:35px;
+    height:35px;
+    display:block;
+    border-radius: 50%;
+    background:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:196px;
+    margin-left:39px;
+    animation:hx8 1s;
+    animation-iteration-count:infinite;
+} 
+ @keyframes hx6{
+    from {
+        opacity:0.3;
+    }
+    to {
+        opacity:0.8;
+    }
+}
+
+@keyframes hx7{
+    from {
+        transform: scale(1);
+        opacity:0.8;
+    }
+    to {
+        transform: scale(2);
+        opacity:0;
+    }
+}
+@keyframes hx8{
+    from {
+        transform: scale(1);
+        opacity:0.8;
+    }
+    to {
+        transform: scale(3);
+        opacity:0;
+    }
+} 
+/********************小圆点动画3***************************/
+#x1{
+    width:25px;
+    height:25px;
+    display:block;
+    border-radius: 50%;
+    background:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:451px;
+    margin-left:-236px;
+    animation:hx9 1s;
+    animation-iteration-count:infinite;
+}
+#x2{
+    width:30px;
+    height:30px;
+    display:block;
+    border-radius: 50%;
+    background:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:448px;
+    margin-left:-239px;
+    animation:hx10 1s;
+    animation-iteration-count:infinite;
+}
+#x3{
+    width:35px;
+    height:35px;
+    display:block;
+    border-radius: 50%;
+    background:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:445px;
+    margin-left:-241px;
+    animation:hx11 1s;
+    animation-iteration-count:infinite;
+} 
+ @keyframes hx9{
+    from {
+        opacity:0.3;
+    }
+    to {
+        opacity:0.8;
+    }
+}
+
+@keyframes hx10{
+    from {
+        transform: scale(1);
+        opacity:0.8;
+    }
+    to {
+        transform: scale(2);
+        opacity:0;
+    }
+}
+@keyframes hx11{
+    from {
+        transform: scale(1);
+        opacity:0.8;
+    }
+    to {
+        transform: scale(3);
+        opacity:0;
+    }
+}
+ /********************小圆点动画5***************************/
+#x4{
+    width:25px;
+    height:25px;
+    display:block;
+    border-radius: 50%;
+    background:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:621px;
+    margin-left:169px;
+    animation:hx12 1s;
+    animation-iteration-count:infinite;
+}
+#x5{
+    width:30px;
+    height:30px;
+    display:block;
+    border-radius: 50%;
+    background:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:618px;
+    margin-left:166px;
+    animation:hx13 1s;
+    animation-iteration-count:infinite;
+}
+#x6{
+    width:35px;
+    height:35px;
+    display:block;
+    border-radius: 50%;
+    background:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:616px;
+    margin-left:164px;
+    animation:hx14 1s;
+    animation-iteration-count:infinite;
+} 
+ @keyframes hx12{
+    from {
+        opacity:0.3;
+    }
+    to {
+        opacity:0.8;
+    }
+}
+
+@keyframes hx13{
+    from {
+        transform: scale(1);
+        opacity:0.8;
+    }
+    to {
+        transform: scale(2);
+        opacity:0;
+    }
+}
+@keyframes hx14{
+    from {
+        transform: scale(1);
+        opacity:0.8;
+    }
+    to {
+        transform: scale(3);
+        opacity:0;
+    }
+} 

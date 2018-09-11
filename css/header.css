@@ -1,0 +1,38 @@
+
+.yetou{
+    width:100%;
+    height:87px;
+    background-image:url(../img/bg_top.png);
+    position:fixed;
+    z-index:100000;
+}
+.header-font{
+    width:100%;
+    height: 70px;
+    font-size:18px;
+    overflow: hidden;
+    text-align:center;
+    position:fixed;
+    z-index:100000;
+
+}
+#d1,#d2{
+    color:#e69800;
+}
+#logo>img{
+    width:150px;
+    height:70px;
+    z-index:100000;
+
+}
+
+.header-font>a{
+    color:white;
+    margin-left:20px;
+    z-index:100000;
+}
+.header-font>a:hover{
+    color:#e69800;
+    margin-left:20px;
+}
+

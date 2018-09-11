@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绝地求生-绝地求生官方网站-腾讯游戏</title>
+    <link rel="shortcut icon" href="/img/pubg.ico">
+    <link rel="bookmark" href="img/pubg.ico">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/body.css">
+   <!-- <iframe frameboder="0" scrolling="no" width="100%" height="90" frameborder="0" src="header.html"></iframe>  -->
+</head>
+<body>
+    <!-- 页头 -->
+    <div id="header"></div>
+    <!-- 第一段视频 -->
+    <div class="main">
+        <!-- 背景视频1 -->
+        <div class="video-1">
+            <video id="v1" src="video/1.mp4" loop="loop" autoplay="autoplay"></video>
+        </div>
+        <!-- 中间播放按钮 -->
+        <div class="btn-play" id="haha">
+           <a href="javascript:showDiv()"> <img src="img/play.png"></a>
+        </div>
+        <!-- 中间大logo -->
+        <div class="bg-logo">
+            <img src="img/logo_b.png" alt="">
+        </div>
+        <!-- 中间播放按钮播放的视频 -->
+        <div class="zzc" id="close-btn">
+            <div class="zzc1">
+                <a id="pause" href="javascript:closeDiv()">X</a>
+                <video id="video-1" src="video/pubg.MP4" loop="loop" controls="controls"></video>
+            </div>
+        </div>
+
+        <!-- 第二段视频 -->
+        <div class="video-2">
+            <video id="video-2" src="video/2.mp4" loop="loop" autoplay="autoplay"></video>    
+            <div class="xs"></div> 
+            <p class="hx">连 呼 吸 都 必 须 小 心 翼 翼,  前 所 未 有 的 紧 张 刺 激 体 验</p> 
+                <span id="h1"></span>   
+                <span id="h2"></span>
+                <span id="h3"></span>
+                <span class="jh"><a href="#"><b>+</b></a></span>  
+        </div>
+        <!-- 第三段视频 -->
+        <div class="video-3">
+            <video id="video-3" src="video/3.mp4" loop="loop" autoplay="autoplay"></video>    
+            <div class="dsj"></div>
+            <p class="sj">真 实 的 射 击 体 验, 多 种 枪 械 与 配 件, 眼 观 六 路 耳 听 八 方</p>
+            <span id="h4"></span>   
+            <span id="h5"></span>
+            <span id="h6"></span>
+            <span class="jh1"><a href="#"><b>+</b></a></span>
+        </div>
+        <!-- 第四天气地形图片 -->
+        <div class="weather-terrain">
+            <!-- 多种真实天气-地形 -->
+            <div class="tianqidixing">
+                <img src="img/tianqidixing.png">
+            </div>
+            <!-- 天气 -->
+           <div class="wea" id="xs">
+                <ul class="pic" id="aaa">
+                    <li class="pic1" id="pq1"><a id="rain" ><img src="img/rain.png"></a></li>
+                    <li class="pic2" id="pq2"><a id="sunny"><img src="img/sunny.png"></a></li>
+                    <li class="pic3" id="pq3"><a id="fog"><img src="img/fog.png"></a></li>
+                </ul>
+           </div>
+           <!-- 地形 -->
+           <div class="ter" id="yc">
+               <ul class="tpic" id="aaaa">
+                   <li class="tpic1" id="pq4"><a><img src="img/jungle.png" ></a></li>
+                   <li class="tpic2" id="pq5"><a><img src="img/river.png" ></a></li>
+                   <li class="tpic3" id="pq6"><a><img src="img/hill.png" ></a></li>
+                   <li class="tpic4" id="pq7"><a><img src="img/buliding.png" ></a></li>
+                   <li class="tpic5" id="pq8"><a><img src="img/plain.png" ></a></li>
+               </ul>
+           </div>
+           <!-- 天气地形小图标 点击切换 -->
+           <!-- 天气 1 -->
+           <div class="tianqi" id="tq">
+                <a href="javascript:showpic1()">
+                    <img src="img/tianqi.png"><br>
+                    <b id="tqdx">天气<br>--</b><br>
+                    <p>天气将严重影响视野，既潜藏着危险，也能成为你的掩护</p>
+                </a>
+           </div>
+           <!-- 天气 2 -->
+           <div class="tianqi1" id="tq1">
+                <a>
+                    <img src="img/tianqi1.png"><br>
+                    <b id="tqdx">天气<br>--</b><br>
+                    <p>天气将严重影响视野，既潜藏着危险，也能成为你的掩护</p>
+                </a>
+           </div>
+            <!-- 地形 1-->
+            <div class="dixing" id="dx">
+                <a href="javascript:showpic2()">
+                    <img src="img/dixing.png"><br>
+                    <b id="tqdx">地形<br>--</b><br>
+                    <p>善于利用不同的地形埋伏和躲避，才能取得胜利</p>
+                </a>
+            </div>
+               <!-- 地形2 -->
+            <div class="dixing1" id="dx1">
+                <a>
+                    <img src="img/dixing1.png"><br>
+                    <b id="tqdx">地形<br>--</b><br>
+                    <p>善于利用不同的地形埋伏和躲避，才能取得胜利</p>
+               </a>
+           </div>
+        </div>
+        <!-- -------组队开车 团队竞技 第四段视频------------ -->
+            <div class="video-4">
+                <video id="video-4" src="video/4.mp4" loop="loop" autoplay="autoplay"></video>    
+                <img id="kc1" src="img/kaiche.png">
+                <img id="kc2" src="img/kaiche1.png">
+                <p class="zj">丰 富 载 具，团 队 合 作，好 友 开 黑</p>
+                <span id="h7"></span>   
+                <span id="h8"></span>
+                <span id="h9"></span>
+                <span class="zjjh"><a href=""><b>+</b></a></span>
+           </div>
+           <!-- ----------瞬息万变 策略为王----------------- -->
+           <div class="later">
+                <img src="img/bg_section5.jpg" alt="">
+                <div class="cl"></div>
+                <span id="x1"></span>   
+                <span id="x2"></span>
+                <span id="x3"></span>
+                <span class="zhjh"><a href=""><b>+</b></a></span>
+                <span id="x4"></span>   
+                <span id="x5"></span>
+                <span id="x6"></span>
+                <span class="zhjh1"><a href=""><b>+</b></a></span>
+           </div>
+    </div>
+    <div id="foot"></div>
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/PUBG.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/header.js"></script>
+<script src="js/footer.js"></script>
+</html>
+
